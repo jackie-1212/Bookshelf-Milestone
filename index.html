@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bookshelf</title>
+    <title>BOOKSHELF</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
+<body>
+  <header>
+    <span class="name">Jackie's Library</span>
+    <nav class="links">
+      <a class="active" href="index.html">BOOKSHELF</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+  <main>
+  <div class="newBook">
+    ADD BOOK
+    <div class="bookinput">
+        Title 
+        <input type="text" class="Title"/>
+    </div>
+    <div class="bookinput">
+        Author 
+        <input type="text" class="Author"/>
+  </div>
+  <div class="bookinput">
+    Subject
+    <input type="text" class="Subject"/>
+  </div>
+  <div class="bookinput">
+    Language
+    <input type="text" class="Language"/>
+  </div>
+  <button class="buttonSubmit">Submit</button>
+  </div>
+  <div class="bookhold"></div>
+  </main>
   <body>
     <script src="js/book-data.js"></script>
+    <script src="js/addbook.js"></script>
     <script src="index.js"></script>
+    
   </body>
 </html>

@@ -17,3 +17,52 @@ li {
   padding: 2%;
   text-align: center;
 }
+
+header {
+  font-size: 2rem;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 4px black;
+  background-color: white;
+  position: fixed;
+}
+
+.name {
+  float: left;
+}
+.links {
+  float: right;
+}
+.links a {
+  text-align: none;
+  color: inherit;
+}
+
+main {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newBook {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 220px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.bookinput {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.buttonSubmit {
+  margin-left: 10px;
+  margin-right: 10px;
+}

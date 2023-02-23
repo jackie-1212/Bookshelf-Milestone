@@ -16,11 +16,11 @@ class Bookshelf {
 }
 //sets parameters for class book
 class Book {
-  constructor(author, language, subject, title) {
-    this.author = author;
-    this.language = language;
-    this.subject = subject;
+  constructor(title, author, subject, language) {
     this.title = title;
+    this.author = author;
+    this.subject = subject;
+    this.language = language;
   }
   //set parameters to certain elements
   render() {
@@ -37,7 +37,7 @@ class Book {
     return mainbook;
   }
 }
-
+const bookhold = document.querySelector(".bookhold");
 const bookshelf = new Bookshelf();
 //loops through the end index of bookdata
 for (let i = 0; i < bookData.length; i++) {
@@ -50,7 +50,6 @@ for (let i = 0; i < bookData.length; i++) {
   bookshelf.addBook(book);
 }
 //adding rendered bookshelf to body
-let body = document.querySelector("body");
-body.append(bookshelf.render());
+bookhold.append(bookshelf.render());
 
 console.log(bookshelf);
