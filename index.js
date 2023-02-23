@@ -14,29 +14,6 @@ class Bookshelf {
     return mainbookshelf;
   }
 }
-//sets parameters for class book
-class Book {
-  constructor(title, author, subject, language) {
-    this.title = title;
-    this.author = author;
-    this.subject = subject;
-    this.language = language;
-  }
-  //set parameters to certain elements
-  render() {
-    const mainbook = document.createElement("li");
-    const newAuthor = document.createElement("p");
-    const newLanguage = document.createElement("p");
-    const newSubject = document.createElement("p");
-    const newTitle = document.createElement("p");
-    newAuthor.textContent = this.author;
-    newLanguage.textContent = this.language;
-    newSubject.textContent = this.subject;
-    newTitle.textContent = this.title;
-    mainbook.append(newAuthor, newLanguage, newSubject, newTitle);
-    return mainbook;
-  }
-}
 const bookhold = document.querySelector(".bookhold");
 const bookshelf = new Bookshelf();
 //loops through the end index of bookdata
