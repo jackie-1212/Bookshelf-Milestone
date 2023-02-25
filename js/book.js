@@ -31,6 +31,12 @@ class Book {
       newCommentButton
     );
 
+    for (let i = 0; i < this.comment.length; i++) {
+      const commentWord = document.createElement("p");
+      commentWord.textContent = this.comment[i];
+      mainbook.appendChild(commentWord);
+    }
+
     //creates input fields to add comments to books
     newCommentButton.addEventListener("click", () => {
       commentTag.innerHTML = "";
@@ -39,10 +45,13 @@ class Book {
       commentButton.textContent = "Send";
       //adding the comment to the books
       commentButton.addEventListener("click", () => {
-        const something = commentInput.value;
+        const commentString = commentInput.value;
         const comment = document.createElement("p");
         comment.textContent = commentInput.value;
-        if (something.length < 280 && something.length > 0) {
+        if (commentString.length < 280 && commentString.length > 0) {
+          //pushing string into comment array
+          this.addComment(commentString);
+          //display new comment into screen
           mainbook.appendChild(comment);
           mainbook.removeChild(commentTag);
         }
@@ -51,5 +60,9 @@ class Book {
       mainbook.append(commentTag);
     });
     return mainbook;
+  }
+
+  addComment(newComment) {
+    this.comment.push(newComment);
   }
 }
